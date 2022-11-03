@@ -18,7 +18,7 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) -o $@ $^
 .c.o:
-	#(CC) -c -o $@ $<
+	$(CC) -c -o $@ $<
 
 
 -include ${DEP}
