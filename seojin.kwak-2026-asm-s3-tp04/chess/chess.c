@@ -44,7 +44,7 @@ void rook_moves(char board[][8], size_t row, size_t col)
 void bishop_moves(char board[][8], size_t row, size_t col)
 {
 	init_board(board);
-    	for(size_t i = 0; i < 8; i++){
+    for(size_t i = 0; i < 8; i++){
 		for(size_t j = 0; j < 8; j++){
 			if(i == row && j == col)
 				board[i][j] = CHESSMAN;
@@ -64,17 +64,17 @@ void queen_moves(char board[][8], size_t row, size_t col)
 {	
 	init_board(board);
 	for(size_t i = 0; i < 8; i++){
-                for(size_t j = 0; j < 8; j++){
-                        if(i == row && j == col)
-                                board[i][j] = CHESSMAN;
+        for(size_t j = 0; j < 8; j++){
+		    if(i == row && j == col)
+                board[i][j] = CHESSMAN;
 			else if(i == row || j == col)
 				board[i][j] = LEGAL_MOVE;
-                        else if(i - j == row - col || j - i == col - row)
-                                board[i][j] = LEGAL_MOVE;
-                        else if(i + j == row + col)
-                                board[i][j] = LEGAL_MOVE;
-                        else
-                                board[i][j] = EMPTY;
-                }
+            else if(i - j == row - col || j - i == col - row)
+                board[i][j] = LEGAL_MOVE;
+            else if(i + j == row + col)
+                board[i][j] = LEGAL_MOVE;
+            else
+			    board[i][j] = EMPTY;
+            }
         }
 }

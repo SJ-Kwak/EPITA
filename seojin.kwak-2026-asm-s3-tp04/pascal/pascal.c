@@ -6,7 +6,7 @@
 // len: length of the triangle.
 void print_triangle(unsigned int tr[][MAX_LEN], size_t len)
 {
-    	for(size_t i = 0; i < len; i++){
+    for(size_t i = 0; i < len; i++){
 		for(size_t j = 0; j <= i; j++){
 			printf("%5u ", tr[i][j]);
 		}

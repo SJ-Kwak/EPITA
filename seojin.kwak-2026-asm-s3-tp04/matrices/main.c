@@ -76,26 +76,26 @@ int main()
 	transpose(m5, ROWS5, COLS5, m5_tr);
 
 	print_matrix("m1_tr", m1_tr, COLS1, ROWS1);
-        print_matrix("m2_tr", m2_tr, COLS2, ROWS2);
-        print_matrix("m3_tr", m3_tr, COLS3, ROWS3);
-        print_matrix("m4_tr", m4_tr, COLS4, ROWS4);
-        print_matrix("m5_tr", m5_tr, COLS5, ROWS5);	
+    print_matrix("m2_tr", m2_tr, COLS2, ROWS2);
+    print_matrix("m3_tr", m3_tr, COLS3, ROWS3);
+    print_matrix("m4_tr", m4_tr, COLS4, ROWS4);
+    print_matrix("m5_tr", m5_tr, COLS5, ROWS5);	
 
 	add(m3, m3, ROWS3, COLS3, m3_plus_m3);
 	add(m4, m5_tr, ROWS4, COLS4, m4_plus_m5tr);
 	add(m5, m4_tr, ROWS5, COLS5, m5_plus_m4tr);
 
 	print_matrix("m3_plus_m3", m3_plus_m3, ROWS3, COLS3);
-        print_matrix("m4_plus_m5tr", m4_plus_m5tr, ROWS4, COLS4);
-        print_matrix("m5_plus_m4tr", m5_plus_m4tr, ROWS5, COLS5);
+    print_matrix("m4_plus_m5tr", m4_plus_m5tr, ROWS4, COLS4);
+    print_matrix("m5_plus_m4tr", m5_plus_m4tr, ROWS5, COLS5);
 
 	mul(m2, m2, ROWS2, COLS2, COLS2, m2_times_m2);
 	mul(m4, m5, ROWS4, COLS4, COLS5, m4_times_m5);
 	mul(m5, m4, ROWS5, COLS5, COLS4, m5_times_m4);
 
 	print_matrix("m2_times_m2", m2_times_m2, ROWS2, COLS2);
-        print_matrix("m4_times_m5", m4_times_m5, ROWS4, COLS5);
-        print_matrix("m5_times_m4", m5_times_m4, ROWS5, COLS4);	
+    print_matrix("m4_times_m5", m4_times_m5, ROWS4, COLS5);
+    print_matrix("m5_times_m4", m5_times_m4, ROWS5, COLS4);	
 
 	return 0;
 }
